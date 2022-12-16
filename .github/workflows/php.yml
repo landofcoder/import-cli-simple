@@ -1,4 +1,4 @@
-name: techdivision/import-cli-simple
+name: landofcoder/import-cli-simple
 
 on:
   push:
