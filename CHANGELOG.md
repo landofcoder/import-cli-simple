@@ -15,7 +15,7 @@
   * Fix import duplicate data for global eav_attribute
   * Fix clear empty value per row
 
-# Version 4.2.1
+# Version 4.2.1 - fix
 
 * Min. PHP Version set to 7.3
 * Support PhpUnit 8.0
