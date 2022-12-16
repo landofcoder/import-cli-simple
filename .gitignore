@@ -8,7 +8,6 @@
 /builds
 /dist
 /target
-/vendor
 /projects
 /instances
 /symfony/logs
