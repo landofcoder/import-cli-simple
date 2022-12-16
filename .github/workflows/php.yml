@@ -35,9 +35,6 @@ jobs:
           php-version: ${{ matrix.php-versions }}
           extensions: pdo, pdo-mysql, zip
 
-    - name: Validate Composer Files
-      run: composer validate
-
     - name: Install Dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
 
