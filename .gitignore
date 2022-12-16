@@ -4,6 +4,8 @@
 /.settings
 /.buildpath
 /var
+/vendor
+!/vendor/techdivision/**
 /app
 /builds
 /dist
