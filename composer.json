@@ -1,5 +1,5 @@
 {
-    "name": "techdivision/import-cli-simple",
+    "name": "landofcoder/import-cli-simple",
     "description": "CLI providing single-threaded Magento 2 importing functionality based on Pacemaker",
     "license": "MIT",
     "require": {
