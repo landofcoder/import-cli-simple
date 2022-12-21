@@ -111,7 +111,7 @@ class UrlKeyUtil implements UrlKeyUtilInterface
             }
         }
     }
-    
+
     /**
      * Returns the URL key aware processor instance.
      *
@@ -158,7 +158,7 @@ class UrlKeyUtil implements UrlKeyUtilInterface
         // $header = $subject->getHeaders();
         // $websitesOnRow = [];
         $checkStoreIds = [];
-       
+
         foreach ($store as $item) {
             $checkStoreIds[] = $item['store_id'] ?? 1;
         }

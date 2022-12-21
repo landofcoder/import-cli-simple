@@ -74,11 +74,12 @@ class RoboFile extends \Robo\Tasks
     /**
      * Clean up the environment for a new build.
      *
-     * @return \Robo\Result The result
+     * @return \Robo\Result|$this The result
      */
     public function clean()
     {
-        return $this->taskDeleteDir($this->properties['target.dir'])->run();
+        return $this;
+        //return $this->taskDeleteDir($this->properties['target.dir'])->run();
     }
 
     /**
@@ -190,32 +191,32 @@ class RoboFile extends \Robo\Tasks
         $targetDir = $this->properties['target.dir'] . DIRECTORY_SEPARATOR . $this->properties['webapp.version'];
 
         // copy the composer.json file
-        $this->taskFilesystemStack()
+        /* $this->taskFilesystemStack()
              ->copy(
                   __DIR__ . DIRECTORY_SEPARATOR . 'composer.json',
                   $targetDir. DIRECTORY_SEPARATOR. 'composer.json'
-             )->run();
+             )->run(); */
 
           // copy the .semver file
-          $this->taskFilesystemStack()
+         /*  $this->taskFilesystemStack()
                ->copy(
                    __DIR__ . DIRECTORY_SEPARATOR . '.semver',
                    $targetDir. DIRECTORY_SEPARATOR. '.semver'
-               )->run();
+               )->run(); */
 
           // copy the bootstrap.php file
-          $this->taskFilesystemStack()
+         /*  $this->taskFilesystemStack()
                ->copy(
                   __DIR__ . DIRECTORY_SEPARATOR . 'bootstrap.php',
                   $targetDir. DIRECTORY_SEPARATOR. 'bootstrap.php'
-               )->run();
+               )->run(); */
 
         // install the composer dependencies
-        $this->taskComposerInstall()
+        /* $this->taskComposerInstall()
             ->dir($targetDir)
             ->noDev()
             ->optimizeAutoloader()
-            ->run();
+            ->run(); */
 
         // prepare the task
         $pharTask = $this->taskPackPhar($archiveName)
@@ -460,8 +461,8 @@ class RoboFile extends \Robo\Tasks
         } catch (\Exception $e) {
 
         }
-        $this->runCs();
-        $this->runMd();
-        $this->runTestsUnit();
+        #$this->runCs();
+        #$this->runMd();
+        ##$this->runTestsUnit();
     }
 }
